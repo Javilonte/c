@@ -5,29 +5,24 @@ using namespace std;
 
 int main(){
     
-    int n;
-    cin >> n;
+    string b, t;
+    cin >> b >> t;
 
-    string l;
-    cin >> l;
+    if(b.size() != t.size()){
+        cout << "NO" << endl;
+        return 0;
+    }
 
-    int CA= 0, CD = 0;
-    for(int i = 0; i < l.size(); i++){
-        if(l[i] == 'A'){
-            CA++;
-        }else{
-            CD++;
+    int j = t.size() -1;
+    for(int i= 0; i<b.size(); i++){
+        if(b[i] != t[j]){
+            cout << "NO" << endl;
+            return 0;
         }
+        j--;
     }
-    if(CA > CD){
-        cout << "Anton" << endl;
-    } else if (CD > CA){
-        cout << "Danik" << endl;
-    } else {
-        cout << "Friendship" <<endl;
-    }
-   
-    
 
+    cout << "YES" << endl;
+    
     return 0;
 }
