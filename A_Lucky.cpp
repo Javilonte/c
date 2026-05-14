@@ -5,24 +5,23 @@ using namespace std;
 
 int main(){
     
-    string t;
+
+    int t;
     cin >> t;
 
-    if(){
-        cout << "NO" << endl;
-        return 0;
-    }
+    while(t--){
+        string s;
+        cin >> s; 
 
-    int j = t.size() -1;
-    for(int i= 0; i<b.size(); i++){
-        if(b[i] != t[j]){
+        int firstHalf, secondHalf;
+
+        firstHalf  = s[0] + s[1] + s[2];
+        secondHalf = s[3]+ s[4] + s[5];
+        
+        if (firstHalf == secondHalf) {
+            cout << "YES" << endl;
+        } else {
             cout << "NO" << endl;
-            return 0;
-        }
-        j--;
-    }
-
-    cout << "YES" << endl;
-    
-    return 0;
+}}
+return 0;
 }
